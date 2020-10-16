@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script async src="opencv.js"></script>
+</head>
+
+<body>
+    <h1 class="text-center my-3 font-weight-light">Photo Editor</h5>
+        <div class="container p-3 bg-light border border-dark">
+            <div class="row">
+                <div class="col-auto">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="fileInput">
+                        <label class="custom-file-label" for="fileInput">Choose file</label>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <select class="custom-select" id="functionSelect">
+                        <option value="0" selected>Open this select menu</option>
+                        <option value="1">findContours</option>
+                        <option value="2">houghLines</option>
+                        <option value="3">houghCircles</option>
+                    </select>
+                </div>
+                <div class="col-auto ml-auto">
+                    <button class="btn btn-success" onclick="exec()">Try it!</button>
+                </div>
+            </div>
+            <div class="row p-3 justify-content-around">
+                <div class="col-6 border bg-white text-center p-2">
+                    <img alt="" id="imageInput" class="img-fluid">
+                </div>
+                <div class="col-6 border bg-white text-center p-2">
+                    <canvas id="canvasOutput" class="img-fluid"></canvas>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
